@@ -1,7 +1,7 @@
 import socket
 
-target_host = "google.com"
-target_port = 80
+target_host = "127.0.0.1"
+target_port = 9555
 
 # createing Socket Object
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
