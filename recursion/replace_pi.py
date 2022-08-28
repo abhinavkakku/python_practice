@@ -13,4 +13,4 @@ def replace_pi(s):
         return s[0] + smallOutput
 
 
-print(replace_pi('apippibcd'))
+print(replace_pi('apibcd'))
