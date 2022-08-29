@@ -1,9 +1,12 @@
 import requests
 
-r = requests.get('https://ethicalhackx.com')
+
+r = requests.get(
+    'https://ethicalhackx.com')
 
 # print the response
-print(r.text)
+html = r.text
+
 
 # assign headers to a variable
 headers = r.headers
@@ -12,7 +15,7 @@ headers = r.headers
 print(headers)
 
 # get some header information and return a default value if not present
-print(headers.get('Content-Length', -1))
+#print(headers.get('Content-Length', -1))
 print(headers.get('Server', -1))
 
 # Check for header if present and return a stamenet if true
