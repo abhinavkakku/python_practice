@@ -34,6 +34,6 @@ def merge_sort(arr):
     merge(s1, s2, arr)
 
 
-arr = [111, 2 12, 23, 4, 95, 66, 7, 78, 9, 10]
+arr = [111, 212, 23, 4, 95, 66, 7, 78, 9, 10]
 merge_sort(arr)
 print(arr)
