@@ -1,13 +1,26 @@
+from datetime import date
+
+
 class Student:
     passingPercentage = 75
 
     # self is instance that will be passed throughout the class
-    def studentDetails(self):
-        self.name = 'Abhinav'  # if only name is used without self, the socpe is limited to function only and cannot be use by other functions in class
+    def __init__(self, name, age, percentage):
+        self.name = name  # if only name is used without self, the socpe is limited to function only and cannot be use by other functions in class
         print('Name = ', self.name)
-        self.percentage = 74
+        self.percentage = percentage
         print('Percentage = ', self.percentage)
+        self.age = age
         pass
+
+    def studentDetails(self):
+        print('Name : ', self.name)
+        print('Age : ', self.age)
+        print('Percentage : ', self.percentage)
+
+    @classmethod
+    def fromBirthYear(cls, name, year, percentage):
+        return cls(name, date.today().year - year, percentage)
 
     def isPassed(self):
         # self.percentage if without self canot be accessed , as percentage is defined in other function above
@@ -21,12 +34,18 @@ class Student:
         # if we pass self to function still, it will ask for self as required argument
         print("Hey ! Welcome to School")
 
-
-s1 = Student()
-# s1.studentDetails()          # instance_name.function() same as below
-# class_name.function(object_name) # This is same as above
-Student.studentDetails(s1)
+    @staticmethod
+    def isTeen(age):
+        return age > 16
 
 
-s1.isPassed()
-s1.welcomeToSchool()
+s1 = Student('Abhinav', 27, 72,)
+
+
+s2 = Student.fromBirthYear('Abhinav', 1995, 85)
+
+
+print(s1.studentDetails())
+print(s2.studentDetails())
+print(s2.__dict__)
+print(s2.isTeen(18))
