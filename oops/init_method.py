@@ -1,5 +1,6 @@
 class Student:
     def __init__(self, name, rollNumber):  # declare the arguments any instance object will take
+        # this helps to assign must have attributes, class object cannot go without these attributes
         self.name = name  # self.name = name will take the name argument passed
         # self.rollNumber = rollNumber will take the rollNumber argument passed
         self.rollNumber = rollNumber
