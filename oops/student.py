@@ -1,6 +1,7 @@
 class student:
+    passingPercentage = 80
     # pass   mention pass when want to declare empty class
-    pass
+    # pass
 
 
 s1 = student()
@@ -39,3 +40,8 @@ print(getattr(s1, 'rollno', '12'))
 
 delattr(s1, 'name')
 print(s1.__dict__)
+
+# if nothing assigned, attribute wil use value assigned in class definition
+print(s1.passingPercentage)
+s2.passingPercentage = 70  # assign value to declared attribute in class
+print(s2.passingPercentage)
