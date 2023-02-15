@@ -1,6 +1,6 @@
 import requests
 
-
+#get request
 r = requests.get(
     'https://ethicalhackx.com')
 
